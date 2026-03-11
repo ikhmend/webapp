@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yu Ideh uu? нь хоолны газар хайх, хоолны төрлөөр шүүх, ресторануудын мэдээлэл үзэх, онлайнаар хоол захиалах боломжтой вэб сайт юм.">
+    <meta name="keywords" content="Хоолны захиалга, хоол, захиалга, yuidehuu, yu ideh uu, yu, ideh, юу идэх үү, идэх">
+    <script src="https://kit.fontawesome.com/5f8978a158.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="./css/widescreen.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <title>Yu Ideh uu? | Бүгд</title>
+</head>
+<body>
+
+    <!-- Үндсэн цэс -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">
+                <span class="tom-text">
+                    <i class="fa-solid fa-utensils"></i> <a href="index.html">Yu Ideh uu?</a>
+                </span>
+            </h1>
+            <ul class="nav-menu">
+                <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page header -->
+        <section id="all" class="container">
+            <h2 class="dund-text">Бүгд</h2>
+            <p class="light-text">6 хоолны газар олдлоо.</p>
+        </section>
+
+        <!-- Filters + Results layout -->
+        <section class="content-layout container">
+
+            <!-- Filters хэсэг -->
+            <aside id="filters">
+                <form class="filter-form">
+                    <div class="filter-header">
+                        <h3>Шүүлт</h3>
+                        <button type="reset">Арилгах</button>
+                    </div>
+
+                    <fieldset class="filter-group">
+                        <legend>Хоолны төрөл</legend>
+
+                        <div class="filter-options">
+                            <label>
+                                <input type="checkbox" name="cuisines" value="chinese">
+                                Хятад
+                            </label>
+                            <label>
+                                <input type="checkbox" name="cuisines" value="korean">
+                                Солонгос
+                            </label>
+                            <label>
+                                <input type="checkbox" name="cuisines" value="mongolian">
+                                Монгол
+                            </label>
+                            <label>
+                                <input type="checkbox" name="cuisines" value="italian">
+                                Итали
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </aside>
+
+            <!-- Results хэсэг -->
+            <section id="results" class="results">
+                <article class="result-restaurant">
+                    <a href="restaurant_detail.html" class="result-card-link">
+                        <div class="restaurant-card">
+                            <div class="badge-over-img">
+                            <img src="./zurguud/pizza.jpg" alt="Artisan Pizza" class="offer-image">
+                            <span class="badge">100.000&#8366;-өөс дээш 20% хөнгөлөлт</span>
+                        </div>
+                            <h3 class="jijig-text restaurant-title">Artisan Pizza</h3>
+                            <p class="light-text">Итали</p>
+                            <p class="light-text">25-30 мин</p>
+                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="result-restaurant">
+                    <a href="restaurant_detail.html" class="result-card-link">
+                        <div class="restaurant-card"> 
+                            <div class="badge-over-img">
+                            <img src="./zurguud/bibimbap.jpg" alt="Don-Woo Korean Restaurant" class="offer-image">
+                            <span class="badge">100.000&#8366;-өөс дээш 20% хөнгөлөлт</span>
+                        </div>
+                            <h3 class="jijig-text restaurant-title">Don-Woo Korean Restaurant</h3>
+                            <p class="light-text">Солонгос</p>
+                            <p class="light-text">25-30 мин</p>
+                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="result-restaurant">
+                    <a href="restaurant_detail.html" class="result-card-link">
+                        
+                        <div class="restaurant-card">
+                            <div class="badge-over-img">
+                            <img src="./zurguud/huushuur.jpg" alt="Билигт" class="offer-image">
+                            <span class="badge">100.000&#8366;-өөс дээш 20% хөнгөлөлт</span>
+                        </div>
+                            <h3 class="jijig-text restaurant-title">Билигт</h3>
+                            <p class="light-text">Монгол</p>
+                            <p class="light-text">25-30 мин</p>
+                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="result-restaurant">
+                    <a href="restaurant_detail.html" class="result-card-link">
+                        <div class="restaurant-card">
+                            <img src="./zurguud/kungpao.jpg" alt="Moly Chinese Restaurant" class="offer-image">
+                            <h3 class="jijig-text restaurant-title">Moly Chinese Restaurant</h3>
+                            <p class="light-text">Хятад</p>
+                            <p class="light-text">25-30 мин</p>
+                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="result-restaurant">
+                    <a href="restaurant_detail.html" class="result-card-link">
+                        <div class="restaurant-card">
+                            <img src="./zurguud/carbonara.jpg" alt="Grazie Vegan Italian Restaurant" class="offer-image">
+                            <h3 class="jijig-text restaurant-title">Grazie Vegan Italian Restaurant</h3>
+                            <p class="light-text">Итали</p>
+                            <p class="light-text">25-30 мин</p>
+                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="result-restaurant">
+                    <a href="restaurant_detail.html" class="result-card-link">
+                        <div class="restaurant-card">
+                            <img src="./zurguud/japchae.jpg" alt="Little Busan Co." class="offer-image">
+                            <h3 class="jijig-text restaurant-title">Little Busan Co.</h3>
+                            <p class="light-text">Солонгос</p>
+                            <p class="light-text">25-30 мин</p>
+                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                        </div>
+                    </a>
+                </article>
+
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-boxes">
+            <div class="box bg-primary">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Утасны дугаар</h3>
+                <p>99******</p>
+            </div>
+
+            <div class="box bg-light">
+                <i class="fa-solid fa-at"></i>
+                <h3>И-мэйл</h3>
+                <p>yu_idehuu@gmail.com</p>
+            </div>
+
+            <div class="box bg-primary">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Хаяг</h3>
+                <p>Улаанбаатар, Баянзүрх дүүрэг, 4-р хороо, 032-р байр</p>
+            </div>
+        </div>
+
+        <p class="footer-copy">&copy; 2026, Yu Ideh uu | Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+</body>
+</html>
