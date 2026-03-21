@@ -20,7 +20,7 @@
         <div class="container nav-container">
             <h1 class="logo">
                 <span class="tom-text">
-                    <i class="fa-solid fa-utensils"></i> Yu Ideh uu?
+                    <i class="fa-solid fa-utensils"></i> <a href="index.html">Yu Ideh uu?</a>
                 </span>
             </h1>
             <ul class="nav-menu">
@@ -30,73 +30,136 @@
         </div>
     </nav>
     <a href="restaurant_detail.html" class="grey-button">Үргэлжлүүлэх</a>
-    <section id="checkout" class="checkout">
-        <h2 class="dund-text">Төлбөр төлөх</h2>
-        <article class="address">
-            <div class="address-header">
-                <h3><i class="fa-solid fa-map-pin"></i>Хүргэх хаяг</h3>
+    <h2 class="dund-text">Төлбөр төлөх</h2>
+    <section id="checkout" class="checkout-layout">
+        <div class="checkout-main">
+            <article class="address">
+                <div class="address-header">
+                    <h3>Хүргэх хаяг<i class="fa-solid fa-map-pin"></i></h3>
+                </div>
+                <form class="address-content">
+                    <div class="address-form"> 
+                        <label for="district">Дүүрэг</label>
+                        <input type="text"
+                        id="district"
+                        name="district"
+                        placeholder="Дүүргийн нэрийг оруулна уу.">
+                    </div>
+                    <div class="address-form"> 
+                        <label for="long-address">Дэлгэрэнгүй хаяг</label>
+                        <input type="text"
+                        id="long-address"
+                        name="long-address"
+                        placeholder="Дэлгэрэнгүй хаягиййг оруулна уу.">
+                    </div>
+                    <div class="address-form"> 
+                        <label for="apt-number">Орцны код</label>
+                        <input type="text"
+                        id="apt-number"
+                        name="apt-number"
+                        placeholder="Орцны код оруулна уу.">
+                    </div>
+                    <div class="address-form"> 
+                        <label for="phone-number">Утасны дугаар</label>
+                        <input type="number"
+                        id="phone-number"
+                        name="phone-number"
+                        placeholder="Утасны дугаарыг оруулна уу.">
+                    </div>
+                    <div class="address-form"> 
+                        <label for="extra-info">Нэмэлт мэдээлэл</label>
+                        <input type="text"
+                        id="extra-info"
+                        name="extra-info"
+                        placeholder="Нэмэлт мэдээллийг оруулна уу.">
+                    </div>
+                </form>
+            </article>
+            <article class="payment">
+                <div class="address-header">
+                    <h3>Төлбөр<i class="fa-regular fa-credit-card"></i></h3>
+                </div>
+                <form class="address-content">
+                    <div class="address-form">
+                        <label for="card-number">Картны дугаар</label>
+                        <input type="text"
+                        id="card-n"
+                        name="card-number"
+                        placeholder="1234 5678 9101 1121">
+                    </div>
+                    <div class="address-form">
+                        <label for="card-number">CVV</label>
+                        <input type="text"
+                        id="card-n"
+                        name="card-number"
+                        placeholder="123">
+                    </div>
+                    <div class="address-form">
+                        <label for="ex-date">Expiry Date</label>
+                        <input type="text"
+                        id="expiry-date"
+                        name="expiry-date"
+                        placeholder="MM/YY">
+                    </div>
+                </form>
+            </article>
+        </div>
+        
+        <article class="order-summary">
+            <h3>Захиалгын дэлгэрэнгүй</h3>
+            <div class="order-header">
+                <h4 class="light-text">Artisan Pizza</h4>
+                <p>Truffle Mushroom</p>
+                <p class="light-text">36.000&#8366;</p>
             </div>
-            <div class="address-content">
-                <form class="address-form"> 
-                    <label for="district">Дүүрэг</label>
-                    <input type="text"
-                    id="district"
-                    name="district"
-                    placeholder="Дүүргийн нэрийг оруулна уу.">
-                </form>
-                <form class="address-form"> 
-                    <label for="long-address">Дэлгэрэнгүй хаяг</label>
-                    <input type="text"
-                    id="long-address"
-                    name="long-address"
-                    placeholder="Дэлгэрэнгүй хаягиййг оруулна уу.">
-                </form>
-                <form class="address-form"> 
-                    <label for="apt-number">Орцны код</label>
-                    <input type="text"
-                    id="apt-number"
-                    name="apt-number"
-                    placeholder="Орцны код оруулна уу.">
-                </form>
-                <form class="address-form"> 
-                    <label for="phone-number">Утасны дугаар</label>
-                    <input type="number"
-                    id="phone-number"
-                    name="phone-number"
-                    placeholder="Утасны дугаарыг оруулна уу.">
-                </form>
-                <form class="address-form"> 
-                    <label for="extra-info">Нэмэлт мэдээлэл</label>
-                    <input type="text"
-                    id="extra-info"
-                    name="extra-info"
-                    placeholder="Нэмэлт мэдээллийг оруулна уу.">
-                </form>
+            <div class="card-item-control">
+                <div class="qty-control">
+                    <button type="button" class="qty-btn">-</button>
+                    <span class="qty-value">1</span>
+                    <button type="button" class="qty-btn">+</button></div>
+                    <button type="button" class="delete"><i class="fa-regular fa-trash-can"></i></button>
             </div>
-        </article>
-        <article class="payment">
-            <div class="payment-header">
-                <h3><i class="fa-regular fa-credit-card"></i>Төлбөр</h3>
+            <div class="total-detail">
+                <div class="une">
+                    <span class="light-text">Үндсэн үнэ</span>
+                    <span>36.000&#8366;</span>
+                </div>
+                <div class="une">
+                    <span class="light-text">Хүргэлт</span>
+                    <span>5.000&#8366;</span></div>
+                </div>
+            <div class="total">
+                <span>Нийт</span>
+                <span>41.000&#8366;</span> 
             </div>
+            <button type="button" class="dark-button">Захиалга өгөх</button>
         </article>
     </section>
-        <footer id="main-footer">
+      <!-- Footer -->
+    <footer id="main-footer">
             <div class="footer-boxes">
                 <div class="box bg-primary">
                     <i class="fa-solid fa-phone"></i>
                     <h3>Утасны дугаар</h3>
                     <p>99******</p>
                 </div>
-
+                
                 <div class="box bg-light">
                     <i class="fa-solid fa-at"></i>
                     <h3>И-мэйл</h3>
                     <p>yu_idehuu@gmail.com</p>
                 </div>
+
                 <div class="box bg-primary">
                     <i class="fa-solid fa-location-dot"></i>
                     <h3>Хаяг</h3>
                     <p>Улаанбаатар, Баянзүрх дүүрэг, 4-р хороо, 032-р байр</p>
+                </div>
+                <div class="box bg-light">
+                    <i class="fa-brands fa-black-tie"></i>
+                    <h3>Portals</h3>
+                    <a href="admin.html" class="light-text">Admin Portal</a>
+                    <a href="merchant.html" class="light-text">Restaurant Dashboard</a>
                 </div>
             </div>
             <p class="footer-copy">&copy; 2026, Yu Ideh uu | Бүх эрх хуулиар хамгаалагдсан.</p>
