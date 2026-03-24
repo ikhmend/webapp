@@ -12,31 +12,36 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <title>Yu Ideh uu? | Бүгд</title>
+    <title>FoodHub.com</title>
 </head>
 <body id="home">
 
-    <!-- Үндсэн цэс -->
     <nav id="navbar">
         <div class="container nav-container">
-            <h1 class="logo">
-                <span class="tom-text">
-                    <i class="fa-solid fa-utensils"></i> Yu Ideh uu?
-                </span>
-            </h1>
+            <div class="brand-row">
+                <a class="site-logo" href="index.html">
+                    <span class="brand-circle">F</span>
+                    <span class="brand-text">FoodHub</span>
+                </a>
+                <div class="delivery-info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Deliver to: <strong>123 Main St</strong></span>
+                </div>
+            </div>
+
             <ul class="nav-menu">
-                <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
-                <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="cart.html" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="login.html" aria-label="Profile"><i class="fa-regular fa-user"></i></a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Showcase хэсэг -->
+    <!-- Hero -->
     <header id="showcase">
         <div class="container">
             <div class="showcase-content">
-                <h1 class="tom-font">Дуртай хоолоо манайхаас захиал!</h1>
-                <p>Таны эргэн тойронд байгаа хамгийн шилдэг хоолны газрыг олж өгье.</p>
+                <h1 class="tom-font">Delicious food, delivered to your door</h1>
+                <p>Discover the best restaurants in your neighborhood and order your favorite meals.</p>
                 <form class="search-form">
                     <label for="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -45,63 +50,104 @@
                         type="text"
                         id="search"
                         name="search"
-                        placeholder="Хайх"
+                        placeholder="Search for restaurants or cuisines..."
                     >
-                    <button type="submit">Хайх</button>
+                    <button type="submit">Search</button>
                 </form>
             </div>
         </div>
     </header>
 
-    <!-- Хоолны ангиллын хэсэг -->
+    <!-- Browse by cuisine -->
     <section id="category" class="category">
         <div class="container">
-            <h2 class="dund-text">Хоолны төрлөөр хайх</h2>
+            <h2 class="dund-text">Browse by Cuisine</h2>
             <ul class="category-list">
                 <li class="category-item">
                     <a href="all.html" class="category-link">
-                        <i class="fa-solid fa-bowl-food"></i> Хятад
+                        <span class="category-icon">🍕</span>
+                        <span>Pizza</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="all.html" class="category-link">
-                        <i class="fa-solid fa-bowl-rice"></i> Солонгос
+                        <span class="category-icon">🍔</span>
+                        <span>Burgers</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="all.html" class="category-link">
-                        <i class="fa-solid fa-pizza-slice"></i> Итали
+                        <span class="category-icon">🍣</span>
+                        <span>Sushi</span>
                     </a>
                 </li>
                 <li class="category-item">
                     <a href="all.html" class="category-link">
-                        <i class="fa-solid fa-bowl-food"></i> Монгол
+                        <span class="category-icon">🍝</span>
+                        <span>Italian</span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="all.html" class="category-link">
+                        <span class="category-icon">🌮</span>
+                        <span>Mexican</span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="all.html" class="category-link">
+                        <span class="category-icon">🥡</span>
+                        <span>Chinese</span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="all.html" class="category-link">
+                        <span class="category-icon">🍜</span>
+                        <span>Thai</span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="all.html" class="category-link">
+                        <span class="category-icon">🥘</span>
+                        <span>Indian</span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="all.html" class="category-link">
+                        <span class="category-icon">🍰</span>
+                        <span>Desserts</span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="all.html" class="category-link">
+                        <span class="category-icon">☕</span>
+                        <span>Coffee</span>
                     </a>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- Онцгой саналууд -->
+    <!-- Special offers -->
     <section id="offers" class="offers">
         <div class="container">
             <div class="section-header">
-                <h2 class="dund-text">Онцгой саналууд</h2>
-                <a href="all.html" class="view-all">Бүгд ></a>
+                <h2 class="dund-text">Special Offers</h2>
+                <a href="all.html" class="view-all">View all <i class="fa-solid fa-angle-right"></i></a>
             </div>
 
-            <div class="offers-list">
+            <div class="offers-list offer-grid">
                 <article class="offer-card">
                     <a href="restaurant_detail.html">
                         <div class="badge-over-img">
                             <img src="./zurguud/pizza.jpg" alt="Artisan Pizza" class="offer-image">
-                            <span class="badge">100.000&#8366;-өөс дээш худалдан авалтад 20% хөнгөлөлт</span>
+                            <span class="badge">20% off orders over $30</span>
                         </div>
                         <div class="offer-content">
-                            <h3 class="jijig-text offer-title">Artisan Pizza</h3>
-                            <p class="light-text">Итали</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                            <h3 class="jijig-text offer-title">Artisan Pizza Co.</h3>
+                            <p class="light-text">Italian, Pizza</p>
+                            <p class="light-text">⭐ 4.8 (523) &nbsp; $ $$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 25-35 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 1.2 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $2.99</p>
                         </div>
                     </a>
                 </article>
@@ -109,14 +155,14 @@
                 <article class="offer-card">
                     <a href="restaurant_detail.html">
                         <div class="badge-over-img">
-                        <img src="./zurguud/bibimbap.jpg" alt="Don-Woo Korean Restaurant" class="offer-image">
-                        <span class="badge">100.000&#8366;-өөс дээш худалдан авалтад 20% хөнгөлөлт</span>    
+                        <img src="./zurguud/japchae.jpg" alt="Sakura Sushi Bar" class="offer-image">
                         </div>
                         <div class="offer-content">
-                            <h3 class="jijig-text offer-title">Don-Woo Korean Restaurant</h3>
-                            <p class="light-text">Солонгос</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                            <h3 class="jijig-text offer-title">Sakura Sushi Bar</h3>
+                            <p class="light-text">Japanese, Sushi</p>
+                            <p class="light-text">⭐ 4.9 (892) &nbsp; $ $$$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 30-40 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 2.1 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $3.99</p>
                         </div>
                     </a>
                 </article>
@@ -124,13 +170,14 @@
                 <article class="offer-card">
                     <a href="restaurant_detail.html">
                         <div class="badge-over-img">
-                            <img src="./zurguud/huushuur.jpg" alt="Билигт" class="offer-image">
-                            <span class="badge">100.000&#8366;-өөс дээш худалдан авалтад 20% хөнгөлөлт</span></div>
+                            <img src="./zurguud/kungpao.jpg" alt="Spice Route" class="offer-image">
+                        </div>
                         <div class="offer-content">
-                            <h3 class="jijig-text offer-title">Билигт</h3>
-                            <p class="light-text">Монгол</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
+                            <h3 class="jijig-text offer-title">Spice Route</h3>
+                            <p class="light-text">Indian, Curry</p>
+                            <p class="light-text">⭐ 4.7 (645) &nbsp; $ $$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 35-45 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 3.5 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $2.49</p>
                         </div>
                     </a>
                 </article>
@@ -138,34 +185,184 @@
         </div>
     </section>
 
+    <section id="trending" class="offers">
+        <div class="container">
+            <div class="section-header section-header-stack">
+                <div>
+                    <h2 class="dund-text">Trending Near You</h2>
+                    <p class="section-sub">Most popular restaurants in your area</p>
+                </div>
+                <a href="all.html" class="view-all">View all <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+
+            <div class="offers-list offer-grid">
+                <article class="offer-card">
+                    <a href="restaurant_detail.html">
+                        <div class="badge-over-img">
+                            <img src="./zurguud/pizza.jpg" alt="Artisan Pizza" class="offer-image">
+                            <span class="badge">20% off orders over $30</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="jijig-text offer-title">Artisan Pizza Co.</h3>
+                            <p class="light-text">Italian, Pizza</p>
+                            <p class="light-text">⭐ 4.8 (523) &nbsp; $ $$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 25-35 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 1.2 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $2.99</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="offer-card">
+                    <a href="restaurant_detail.html">
+                        <div class="badge-over-img">
+                            <img src="./zurguud/japchae.jpg" alt="Sakura Sushi Bar" class="offer-image">
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="jijig-text offer-title">Sakura Sushi Bar</h3>
+                            <p class="light-text">Japanese, Sushi</p>
+                            <p class="light-text">⭐ 4.9 (892) &nbsp; $ $$$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 30-40 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 2.1 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $3.99</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="offer-card">
+                    <a href="restaurant_detail.html">
+                        <div class="badge-over-img">
+                            <img src="./zurguud/huushuur.jpg" alt="The Burger Joint" class="offer-image">
+                            <span class="badge">Free fries with any burger</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="jijig-text offer-title">The Burger Joint</h3>
+                            <p class="light-text">American, Burgers</p>
+                            <p class="light-text">⭐ 4.6 (1204) &nbsp; $ $$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 20-30 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 0.8 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $1.99</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="offer-card">
+                    <a href="restaurant_detail.html">
+                        <div class="badge-over-img">
+                            <img src="./zurguud/kungpao.jpg" alt="Spice Route" class="offer-image">
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="jijig-text offer-title">Spice Route</h3>
+                            <p class="light-text">Indian, Curry</p>
+                            <p class="light-text">⭐ 4.7 (645) &nbsp; $ $$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 35-45 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 3.5 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $2.49</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="offer-card">
+                    <a href="restaurant_detail.html">
+                        <div class="badge-over-img">
+                            <img src="./zurguud/bibimbap.jpg" alt="Taco Fiesta" class="offer-image">
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="jijig-text offer-title">Taco Fiesta</h3>
+                            <p class="light-text">Mexican, Tacos</p>
+                            <p class="light-text">⭐ 4.5 (789) &nbsp; $ $</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 15-25 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 1.5 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $1.49</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="offer-card">
+                    <a href="restaurant_detail.html">
+                        <div class="badge-over-img">
+                            <img src="./zurguud/carbonara.jpg" alt="Green Leaf Cafe" class="offer-image">
+                            <span class="badge">Buy 1 Get 1 50% off</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="jijig-text offer-title">Green Leaf Cafe</h3>
+                            <p class="light-text">Healthy, Salads</p>
+                            <p class="light-text">⭐ 4.4 (412) &nbsp; $ $$</p>
+                            <p class="light-text"><i class="fa-regular fa-clock"></i> 20-30 min <span class="card-distance"><i class="fa-solid fa-location-dot"></i> 1.8 mi</span></p>
+                            <p class="light-text delivery-line">Delivery: $2.99</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="partner-cta">
+        <div class="container partner-cta-content">
+            <h2>Are you a restaurant owner?</h2>
+            <p>Partner with us and reach thousands of hungry customers.</p>
+            <a href="merchant.html" class="partner-btn">Get Started</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="main-footer">
-            <div class="footer-boxes">
-                <div class="box bg-primary">
-                    <i class="fa-solid fa-phone"></i>
-                    <h3>Утасны дугаар</h3>
-                    <p>99******</p>
-                </div>
-                
-                <div class="box bg-light">
-                    <i class="fa-solid fa-at"></i>
-                    <h3>И-мэйл</h3>
-                    <p>yu_idehuu@gmail.com</p>
+        <div class="footer-inner">
+
+            <!-- Top grid: brand + 3 link columns -->
+            <div class="footer-top">
+
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="footer-brand-circle">F</span>
+                        <span class="footer-brand-name">FoodHub</span>
+                    </a>
+                    <p class="footer-tagline">Discover and order from the best local restaurants.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
 
-                <div class="box bg-primary">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Хаяг</h3>
-                    <p>Улаанбаатар, Баянзүрх дүүрэг, 4-р хороо, 032-р байр</p>
+                <!-- Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
                 </div>
-                <div class="box bg-light">
-                    <i class="fa-brands fa-black-tie"></i>
-                    <h3>Portals</h3>
-                    <a href="admin.html" class="light-text">Admin Portal</a>
-                    <a href="merchant.html" class="light-text">Restaurant Dashboard</a>
+
+                <!-- For Restaurants -->
+                <div class="footer-col">
+                    <h4>For Restaurants</h4>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="merchant.html">Restaurant Dashboard</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
                 </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div><!-- /footer-top -->
+
+            <hr class="footer-divider">
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 FoodHub. All rights reserved.</span>
+                <a href="Admin/admin.html" class="footer-admin-link">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Admin Portal
+                </a>
             </div>
-            <p class="footer-copy">&copy; 2026, Yu Ideh uu | Бүх эрх хуулиар хамгаалагдсан.</p>
+
+        </div><!-- /footer-inner -->
     </footer>
 </body>
 </html>

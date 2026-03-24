@@ -1,0 +1,7 @@
+{
+  "id": "disputes",
+  "title": "Orders & Disputes",
+  "route": "#disputes",
+  "component": "DisputesEscalations",
+  "description": "Dispute and escalation workflow overview"
+}

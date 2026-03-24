@@ -1,0 +1,7 @@
+{
+  "id": "users",
+  "title": "User Management",
+  "route": "#users",
+  "component": "UserManagement",
+  "description": "User and account directory management interface"
+}

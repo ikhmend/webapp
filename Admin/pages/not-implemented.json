@@ -1,0 +1,7 @@
+{
+  "id": "not-implemented",
+  "title": "Other Admin Features",
+  "route": "#promotions",
+  "component": "NotImplemented",
+  "description": "Placeholder for promotions/banners/notifications/etc"
+}
