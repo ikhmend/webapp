@@ -1,0 +1,7 @@
+{
+  "id": "restaurants",
+  "title": "Restaurants",
+  "route": "#restaurants",
+  "component": "RestaurantsManagement",
+  "description": "List and manage restaurant partner records"
+}

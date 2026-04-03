@@ -1,0 +1,125 @@
+const restaurantData = {
+    id: 1,
+    name: "Artisan Pizza Co.",
+    heroImage: "./zurguud/pizza.jpg",
+    rating: 4.8,
+    reviewCount: 523,
+    cuisine: ["Italian", "Pizza"],
+    priceLevel: "$$",
+    deliveryTime: "25-35 min",
+    distance: "1.2 mi",
+    deliveryFee: "$2.99",
+    offer: "20% off orders over $30",
+
+    menu: [
+        {
+            category: "Classic Pizzas",
+            items: [
+                {
+                    id: 101,
+                    name: "Margherita Pizza",
+                    image: "./zurguud/margherita pizza.jpg",
+                    status: "Эрэлттэй",
+                    description: "Шинэхэн моцарелла бяслаг, Сан Марцано улаан лооль, базилик, нэмэлт оливын тос",
+                    price: "28.000₮"
+                },
+                {
+                    id: 102,
+                    name: "Pepperoni Pizza",
+                    image: "./zurguud/pepperoni.jpg",
+                    status: "Эрэлттэй",
+                    description: "Давхар пепперони, моцарелла бяслаг, улаан лоольны сүмс",
+                    price: "38.000₮"
+                }
+            ]
+        },
+        {
+            category: "Specialty Pizzas",
+            items: [
+                {
+                    id: 201,
+                    name: "Truffle Mushroom",
+                    image: "./zurguud/truffle.jpg",
+                    status: "",
+                    description: "Зэрлэг мөөг, трюфель тос, фонтина бяслаг",
+                    price: "36.000₮"
+                },
+                {
+                    id: 202,
+                    name: "BBQ Chicken",
+                    image: "",
+                    status: "",
+                    description: "Шарсан тахиа, BBQ сүмс, улаан сонгино, утсан гөүда бяслаг",
+                    price: "22.000₮"
+                }
+            ]
+        },
+        {
+            category: "Salads & Starters",
+            items: [
+                {
+                    id: 301,
+                    name: "Ceaser Salad",
+                    image: "",
+                    status: "",
+                    description: "Пармезан бяслаг, улаан лооль, цызарь сүмс, крахмаль",
+                    price: "13.000₮"
+                },
+                {
+                    id: 302,
+                    name: "Саримстай талх",
+                    image: "",
+                    status: "",
+                    description: "Саримстай цөцгий, амтлагчтай шинэхэн барьсан талх",
+                    price: "6.900₮"
+                }
+            ]
+        }
+    ],
+
+    reviewsSummary: {
+        average: 4.8,
+        total: 523,
+        distribution: {
+            5: 75,
+            4: 20,
+            3: 3,
+            2: 0,
+            1: 0
+        }
+    },
+
+    reviews: [
+        {
+            id: 1,
+            name: "Sarah Johnson",
+            avatar: "./zurguud/user1.jpg",
+            rating: 5,
+            date: "2/28/2024",
+            text: "Best pizza in town! The crust is perfectly crispy and the ingredients are always fresh. The Margherita is my favorite - simple but delicious."
+        },
+        {
+            id: 2,
+            name: "Michael Chen",
+            avatar: "./zurguud/user2.jpg",
+            rating: 4,
+            date: "2/25/2024",
+            text: "Great food and fast delivery. The truffle mushroom pizza was amazing. Only complaint is that the portions could be slightly larger for the price."
+        },
+        {
+            id: 3,
+            name: "Emily Davis",
+            avatar: "./zurguud/user3.jpg",
+            rating: 5,
+            date: "2/20/2024",
+            text: "Absolutely love this place! The wood-fired oven makes such a difference. Everything tastes authentic and the service is always friendly."
+        }
+    ],
+    info: {
+        about: "Authentic wood-fired pizza with fresh, locally-sourced ingredients. Family-owned since 1985.",
+        address: "123 Main Street, Downtown",
+        phone: "(555) 123-4567",
+        hours: "11:00 AM - 10:00 PM",
+        tags: ["Wood-fired", "Organic", "Family-friendly"]
+    }
+};

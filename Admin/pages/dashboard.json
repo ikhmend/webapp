@@ -1,0 +1,7 @@
+{
+  "id": "dashboard",
+  "title": "Platform Overview",
+  "route": "#dashboard",
+  "component": "Dashboard",
+  "description": "Main admin dashboard with metrics and urgent actions"
+}

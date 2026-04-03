@@ -7,190 +7,302 @@
     <meta name="keywords" content="Хоолны захиалга, хоол, захиалга, yuidehuu, yu ideh uu, yu, ideh, юу идэх үү, идэх">
     <script src="https://kit.fontawesome.com/5f8978a158.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
     <link rel="stylesheet" media="screen and (min-width: 1100px)" href="./css/widescreen.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
-    <title>Yu Ideh uu? | Бүгд</title>
+    <title>FoodHub.mn</title>
 </head>
 <body>
 
-    <!-- Үндсэн цэс -->
     <nav id="navbar">
         <div class="container nav-container">
-            <h1 class="logo">
-                <span class="tom-text">
-                    <i class="fa-solid fa-utensils"></i> <a href="index.html">Yu Ideh uu?</a>
-                </span>
-            </h1>
+            <div class="brand-row">
+                <a class="site-logo" href="index.html">
+                    <span class="brand-circle">F</span>
+                    <span class="brand-text">FoodHub</span>
+                </a>
+                <div class="delivery-info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Deliver to: <strong>123 Main St</strong></span>
+                </div>
+            </div>
+
             <ul class="nav-menu">
-                <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
-                <li><a href="login.html"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="cart.html" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="login.html" aria-label="Profile"><i class="fa-regular fa-user"></i></a></li>
             </ul>
         </div>
     </nav>
 
-    <main>
-        <!-- Page header -->
-        <section id="all" class="container">
-            <h2 class="dund-text">Бүгд</h2>
-            <p class="light-text">6 хоолны газар олдлоо.</p>
+    <main class="all-page">
+        <section id="all" class="container all-header">
+            <h1 class="all-title">All Restaurants</h1>
+            <p class="all-subtitle">6 restaurants found</p>
         </section>
 
-        <!-- Filters + Results layout -->
-        <section class="content-layout container">
-
-            <!-- Filters хэсэг -->
-            <aside id="filters">
+        <section class="container content-layout all-layout">
+            <aside id="filters" class="all-filters">
                 <form class="filter-form">
                     <div class="filter-header">
-                        <h3>Шүүлт</h3>
-                        <button type="reset">Арилгах</button>
+                        <h3>Filters</h3>
+                        <button type="reset">Clear all</button>
                     </div>
 
                     <fieldset class="filter-group">
-                        <legend>Хоолны төрөл</legend>
-
+                        <legend>Cuisines</legend>
                         <div class="filter-options">
-                            <label>
-                                <input type="checkbox" name="cuisines" value="chinese">
-                                Хятад
-                            </label>
-                            <label>
-                                <input type="checkbox" name="cuisines" value="korean">
-                                Солонгос
-                            </label>
-                            <label>
-                                <input type="checkbox" name="cuisines" value="mongolian">
-                                Монгол
-                            </label>
-                            <label>
-                                <input type="checkbox" name="cuisines" value="italian">
-                                Итали
-                            </label>
+                            <label><input type="checkbox" name="cuisines" value="italian">Italian</label>
+                            <label><input type="checkbox" name="cuisines" value="pizza">Pizza</label>
+                            <label><input type="checkbox" name="cuisines" value="japanese">Japanese</label>
+                            <label><input type="checkbox" name="cuisines" value="sushi">Sushi</label>
+                            <label><input type="checkbox" name="cuisines" value="american">American</label>
+                            <label><input type="checkbox" name="cuisines" value="burgers">Burgers</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="filter-group">
+                        <legend>Price Range</legend>
+                        <div class="filter-options price-options">
+                            <label><input type="checkbox" name="price" value="1">$</label>
+                            <label><input type="checkbox" name="price" value="2">$$</label>
+                            <label><input type="checkbox" name="price" value="3">$$$</label>
+                            <label><input type="checkbox" name="price" value="4">$$$$</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="filter-group">
+                        <legend>Minimum Rating</legend>
+                        <input class="range-input" type="range" min="0" max="5" value="0" step="0.5">
+                        <div class="range-labels">
+                            <span>0</span>
+                            <span>5</span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="filter-group">
+                        <legend>Max Delivery Time</legend>
+                        <input class="range-input dark" type="range" min="15" max="60" value="60" step="5">
+                        <div class="range-labels">
+                            <span>15 min</span>
+                            <span>60 min</span>
                         </div>
                     </fieldset>
                 </form>
             </aside>
 
-            <!-- Results хэсэг -->
-            <section id="results" class="results">
-                <article class="result-restaurant">
-                    <a href="restaurant_detail.html" class="result-card-link">
-                        <div class="restaurant-card">
-                            <div class="badge-over-img">
-                            <img src="./zurguud/pizza.jpg" alt="Artisan Pizza" class="offer-image">
-                            <span class="badge">100.000&#8366;-өөс дээш 20% хөнгөлөлт</span>
-                        </div>
-                            <h3 class="jijig-text restaurant-title">Artisan Pizza</h3>
-                            <p class="light-text">Итали</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
-                        </div>
-                    </a>
-                </article>
+            <section class="all-results-wrap">
+                <div class="results-toolbar">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect" name="sort">
+                        <option>Recommended</option>
+                        <option>Top Rated</option>
+                        <option>Fastest Delivery</option>
+                    </select>
+                </div>
 
-                <article class="result-restaurant">
-                    <a href="restaurant_detail.html" class="result-card-link">
-                        <div class="restaurant-card"> 
-                            <div class="badge-over-img">
-                            <img src="./zurguud/bibimbap.jpg" alt="Don-Woo Korean Restaurant" class="offer-image">
-                            <span class="badge">100.000&#8366;-өөс дээш 20% хөнгөлөлт</span>
-                        </div>
-                            <h3 class="jijig-text restaurant-title">Don-Woo Korean Restaurant</h3>
-                            <p class="light-text">Солонгос</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
-                        </div>
-                    </a>
-                </article>
+                <section id="results" class="results">
+                    <article class="result-restaurant">
+                        <a href="restaurant_detail.html" class="result-card-link">
+                            <div class="restaurant-card all-card">
+                                <div class="badge-over-img">
+                                    <img src="./zurguud/japchae.jpg" alt="Sakura Sushi Bar" class="offer-image">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="restaurant-title">Sakura Sushi Bar</h3>
+                                    <p class="card-meta">Japanese, Sushi</p>
+                                    <p class="card-stats">⭐ 4.9 (892) &nbsp; $ $$</p>
+                                    <div class="card-foot">
+                                        <span><i class="fa-regular fa-clock"></i> 30-40 min</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> 2.1 mi</span>
+                                    </div>
+                                    <p class="delivery-fee">Delivery: $3.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="result-restaurant">
-                    <a href="restaurant_detail.html" class="result-card-link">
-                        
-                        <div class="restaurant-card">
-                            <div class="badge-over-img">
-                            <img src="./zurguud/huushuur.jpg" alt="Билигт" class="offer-image">
-                            <span class="badge">100.000&#8366;-өөс дээш 20% хөнгөлөлт</span>
-                        </div>
-                            <h3 class="jijig-text restaurant-title">Билигт</h3>
-                            <p class="light-text">Монгол</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
-                        </div>
-                    </a>
-                </article>
+                    <article class="result-restaurant">
+                        <a href="restaurant_detail.html" class="result-card-link">
+                            <div class="restaurant-card all-card">
+                                <div class="badge-over-img">
+                                    <img src="./zurguud/pizza.jpg" alt="Artisan Pizza Co." class="offer-image">
+                                    <span class="badge">20% off orders over $30</span>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="restaurant-title">Artisan Pizza Co.</h3>
+                                    <p class="card-meta">Italian, Pizza</p>
+                                    <p class="card-stats">⭐ 4.8 (523) &nbsp; $ $$</p>
+                                    <div class="card-foot">
+                                        <span><i class="fa-regular fa-clock"></i> 25-35 min</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> 1.2 mi</span>
+                                    </div>
+                                    <p class="delivery-fee">Delivery: $2.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="result-restaurant">
-                    <a href="restaurant_detail.html" class="result-card-link">
-                        <div class="restaurant-card">
-                            <img src="./zurguud/kungpao.jpg" alt="Moly Chinese Restaurant" class="offer-image">
-                            <h3 class="jijig-text restaurant-title">Moly Chinese Restaurant</h3>
-                            <p class="light-text">Хятад</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
-                        </div>
-                    </a>
-                </article>
+                    <article class="result-restaurant">
+                        <a href="restaurant_detail.html" class="result-card-link">
+                            <div class="restaurant-card all-card">
+                                <div class="badge-over-img">
+                                    <img src="./zurguud/kungpao.jpg" alt="Spice Route" class="offer-image">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="restaurant-title">Spice Route</h3>
+                                    <p class="card-meta">Indian, Curry</p>
+                                    <p class="card-stats">⭐ 4.7 (645) &nbsp; $ $$</p>
+                                    <div class="card-foot">
+                                        <span><i class="fa-regular fa-clock"></i> 35-45 min</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> 3.5 mi</span>
+                                    </div>
+                                    <p class="delivery-fee">Delivery: $2.49</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="result-restaurant">
-                    <a href="restaurant_detail.html" class="result-card-link">
-                        <div class="restaurant-card">
-                            <img src="./zurguud/carbonara.jpg" alt="Grazie Vegan Italian Restaurant" class="offer-image">
-                            <h3 class="jijig-text restaurant-title">Grazie Vegan Italian Restaurant</h3>
-                            <p class="light-text">Итали</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
-                        </div>
-                    </a>
-                </article>
+                    <article class="result-restaurant">
+                        <a href="restaurant_detail.html" class="result-card-link">
+                            <div class="restaurant-card all-card">
+                                <div class="badge-over-img">
+                                    <img src="./zurguud/huushuur.jpg" alt="The Burger Joint" class="offer-image">
+                                    <span class="badge">Free fries with any burger</span>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="restaurant-title">The Burger Joint</h3>
+                                    <p class="card-meta">American, Burgers</p>
+                                    <p class="card-stats">⭐ 4.6 (1204) &nbsp; $ $$</p>
+                                    <div class="card-foot">
+                                        <span><i class="fa-regular fa-clock"></i> 20-30 min</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> 1.8 mi</span>
+                                    </div>
+                                    <p class="delivery-fee">Delivery: $1.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
-                <article class="result-restaurant">
-                    <a href="restaurant_detail.html" class="result-card-link">
-                        <div class="restaurant-card">
-                            <img src="./zurguud/japchae.jpg" alt="Little Busan Co." class="offer-image">
-                            <h3 class="jijig-text restaurant-title">Little Busan Co.</h3>
-                            <p class="light-text">Солонгос</p>
-                            <p class="light-text">25-30 мин</p>
-                            <p class="light-text">Хүргэлт: 5000&#8366;</p>
-                        </div>
-                    </a>
-                </article>
+                    <article class="result-restaurant">
+                        <a href="restaurant_detail.html" class="result-card-link">
+                            <div class="restaurant-card all-card">
+                                <div class="badge-over-img">
+                                    <img src="./zurguud/bibimbap.jpg" alt="Taco Fiesta" class="offer-image">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="restaurant-title">Taco Fiesta</h3>
+                                    <p class="card-meta">Mexican, Tacos</p>
+                                    <p class="card-stats">⭐ 4.5 (789) &nbsp; $ $</p>
+                                    <div class="card-foot">
+                                        <span><i class="fa-regular fa-clock"></i> 20-30 min</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> 2.8 mi</span>
+                                    </div>
+                                    <p class="delivery-fee">Delivery: $2.29</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
 
+                    <article class="result-restaurant">
+                        <a href="restaurant_detail.html" class="result-card-link">
+                            <div class="restaurant-card all-card">
+                                <div class="badge-over-img">
+                                    <img src="./zurguud/carbonara.jpg" alt="Green Leaf Cafe" class="offer-image">
+                                    <span class="badge">Buy 1 Get 1 50% off</span>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="restaurant-title">Green Leaf Cafe</h3>
+                                    <p class="card-meta">Healthy, Salads</p>
+                                    <p class="card-stats">⭐ 4.4 (412) &nbsp; $ $$</p>
+                                    <div class="card-foot">
+                                        <span><i class="fa-regular fa-clock"></i> 25-35 min</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> 1.9 mi</span>
+                                    </div>
+                                    <p class="delivery-fee">Delivery: $2.59</p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </section>
             </section>
         </section>
     </main>
 
-    <!-- Footer -->
-   <footer id="main-footer">
-            <div class="footer-boxes">
-                <div class="box bg-primary">
-                    <i class="fa-solid fa-phone"></i>
-                    <h3>Утасны дугаар</h3>
-                    <p>99******</p>
-                </div>
-                
-                <div class="box bg-light">
-                    <i class="fa-solid fa-at"></i>
-                    <h3>И-мэйл</h3>
-                    <p>yu_idehuu@gmail.com</p>
+    <!-- ── ENHANCED FOOTER ── -->
+    <footer id="main-footer">
+        <div class="footer-inner">
+
+            <!-- Top grid: brand + 3 link columns -->
+            <div class="footer-top">
+
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="footer-brand-circle">F</span>
+                        <span class="footer-brand-name">FoodHub</span>
+                    </a>
+                    <p class="footer-tagline">Discover and order from the best local restaurants.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
 
-                <div class="box bg-primary">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Хаяг</h3>
-                    <p>Улаанбаатар, Баянзүрх дүүрэг, 4-р хороо, 032-р байр</p>
+                <!-- Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
                 </div>
-                <div class="box bg-light">
-                    <i class="fa-brands fa-black-tie"></i>
-                    <h3>Portals</h3>
-                    <a href="admin.html" class="light-text">Admin Portal</a>
-                    <a href="merchant.html" class="light-text">Restaurant Dashboard</a>
+
+                <!-- For Restaurants -->
+                <div class="footer-col">
+                    <h4>For Restaurants</h4>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="merchant.html">Restaurant Dashboard</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
                 </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div><!-- /footer-top -->
+
+            <hr class="footer-divider">
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 FoodHub. All rights reserved.</span>
+                <a href="Admin/admin.html" class="footer-admin-link">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Admin Portal
+                </a>
             </div>
-            <p class="footer-copy">&copy; 2026, Yu Ideh uu | Бүх эрх хуулиар хамгаалагдсан.</p>
+
+        </div><!-- /footer-inner -->
     </footer>
+
+    <!-- Floating help button -->
+    <a href="#" class="footer-help-btn" aria-label="Help">?</a>
 
 </body>
 </html>
