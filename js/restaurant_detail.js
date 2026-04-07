@@ -3,16 +3,17 @@ const menuSection = document.getElementById("menu-section");
 const reviewsSection = document.getElementById("reviews-section");
 const infoSection = document.getElementById("info-section");
 const cartCountElement = document.getElementById("cart-count");
-let cart = [];
-
+let restaurantData = null;
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 function updateCartCount() {
     const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    if (!cartCountElement) return;
     cartCountElement.textContent = totalQuantity;
 }
-
 function addToCart(itemId) {
+    console.log("addToCart ажиллалаа", itemId);
+    if (!restaurantData) return;
     let selectedItem = null;
-
     for (const group of restaurantData.menu) {
         const found = group.items.find(item => item.id === itemId);
         if (found) {
@@ -20,11 +21,8 @@ function addToCart(itemId) {
             break;
         }
     }
-
     if (!selectedItem) return;
-
     const existing = cart.find(item => item.id === itemId);
-
     if (existing) {
         existing.quantity += 1;
     } else {
@@ -32,13 +30,15 @@ function addToCart(itemId) {
             id: selectedItem.id,
             name: selectedItem.name,
             price: selectedItem.price,
+            image: selectedItem.image,
             quantity: 1
         });
     }
-
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     console.log(cart);
 }
+window.addToCart = addToCart;
 function renderDetails(data) {
     detailsSection.innerHTML = `
         <div class="details-hero">
@@ -95,10 +95,8 @@ function getStars(rating) {
     const empty = "☆".repeat(5 - Math.floor(rating));
     return full + empty;
 }
-
 function renderReviews(data) {
     const dist = data.reviewsSummary.distribution;
-
     reviewsSection.innerHTML = `
         <div class="reviews-container">
             <div class="review-summary-card">
@@ -118,7 +116,6 @@ function renderReviews(data) {
                     `).join("")}
                 </div>
             </div>
-
             ${data.reviews.map(review => `
                 <div class="review-card">
                     <div class="review-header">
@@ -137,13 +134,13 @@ function renderReviews(data) {
         </div>
     `;
 }
+
 function renderInfo(data) {
     infoSection.innerHTML = `
         <div class="info-container">
             <div class="info-card">
                 <h2>About</h2>
                 <p class="info-about">${data.info.about}</p>
-
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
@@ -151,7 +148,6 @@ function renderInfo(data) {
                         <p>${data.info.address}</p>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
                     <div>
@@ -159,7 +155,6 @@ function renderInfo(data) {
                         <p>${data.info.phone}</p>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <i class="fa-regular fa-clock"></i>
                     <div>
@@ -167,7 +162,6 @@ function renderInfo(data) {
                         <p>${data.info.hours}</p>
                     </div>
                 </div>
-
                 <div class="info-tags">
                     <h3>Tags</h3>
                     <div class="tag-list">
@@ -178,29 +172,29 @@ function renderInfo(data) {
         </div>
     `;
 }
-renderDetails(restaurantData);
-renderMenu(restaurantData);
-renderReviews(restaurantData);
-renderInfo(restaurantData);
-updateCartCount();
-const tabButtons = document.querySelectorAll(".tab-btn");
-const tabPanels = document.querySelectorAll(".tab-panel");
-
-tabButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const target = button.dataset.tab;
-
-        tabButtons.forEach(btn => btn.classList.remove("active"));
-        tabPanels.forEach(panel => panel.classList.remove("active"));
-
-        button.classList.add("active");
-
-        if (target === "menu") {
-            document.getElementById("menu-section").classList.add("active");
-        } else if (target === "reviews") {
-            document.getElementById("reviews-section").classList.add("active");
-        } else if (target === "info") {
-            document.getElementById("info-section").classList.add("active");
-        }
+fetch("./js/restaurantData.json")
+    .then(response => response.json())
+    .then(data => {
+        restaurantData = data;
+        renderDetails(data);
+        renderMenu(data);
+        renderReviews(data);
+        renderInfo(data);
+        updateCartCount();
+    })
+    .catch(error => {
+        console.error("Алдаа", error);
     });
-});
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+    tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const target = button.dataset.tab;
+
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            tabPanels.forEach(panel => panel.classList.remove("active"));
+
+            button.classList.add("active");
+            document.getElementById(`${target}-section`).classList.add("active");
+        });
+    });

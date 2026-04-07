@@ -30,7 +30,12 @@
             </div>
 
             <ul class="nav-menu">
-                <li><a href="cart.html" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>
+                    <a href="cart.html" aria-label="Cart" class="cart-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
                 <li><a href="login.html" aria-label="Profile"><i class="fa-regular fa-user"></i></a></li>
             </ul>
         </div>
@@ -39,19 +44,8 @@
     <main>
         <section id="cart-page" class="container">
             <h2 class="dund-text">Миний сагс</h2>
- 
-            <!-- Empty cart state -->
-            <div class="cart-empty-wrapper">
-                <div class="cart-empty-card">
-                    <div class="cart-empty-icon">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
-                    <h3 class="cart-empty-title">Your cart is empty</h3>
-                    <p class="cart-empty-sub">Add some delicious items to get started!</p>
-                    <a href="index.html" class="cart-browse-btn">Browse Restaurants</a>
-                </div>
-            </div>
-        </section>
+            <div id="cart-content"></div>
+</section>
     </main>
 
     <footer id="main-footer">
@@ -122,5 +116,6 @@
 
         </div><!-- /footer-inner -->
     </footer>
+    <script src="./js/cart.js"></script>
 </body>
 </html>

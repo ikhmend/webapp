@@ -512,3 +512,16 @@
     font-size: 0.88rem;
     padding: 7px 12px;
 }
+.checkout-layout {
+    grid-template-columns: 1fr;
+}
+.checkout-grid {
+    grid-template-columns: 1fr;
+}
+.cart-item-card {
+    flex-direction: column;
+}
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+}
