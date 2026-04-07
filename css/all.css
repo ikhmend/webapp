@@ -1,6 +1,6 @@
 
 .all-page {
-    background: #f4f5f7;
+    background: white;
     padding: 1.2rem 0 3rem;
 }
 
@@ -11,7 +11,7 @@
 .all-title {
     font-size: 2.2rem;
     line-height: 1.15;
-    color: #1f2937;
+    color: black;
 }
 
 .all-subtitle {
