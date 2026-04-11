@@ -1,15 +1,14 @@
-function MenuItemCard({ item }) {
+function MenuItemCard({ item, onAddToCart }) {
   return (
     <div className="food-item">
+      {item.image && <img src={item.image} alt={item.name} />}
       <div className="food-content">
         <h3>{item.name}</h3>
+        <span className="status">Эрэлттэй</span>
         <p className="light-text">{item.description}</p>
-        <div className="food-footer">
-          <p>{item.price}</p>
-          <button className="dark-button">+Нэмэх</button>
-        </div>
+        <p className="item-price">{item.price}</p>
       </div>
-      <img src={item.image} alt={item.name} />
+      <button className="dark-button" onClick={() => onAddToCart(item)}>+Нэмэх</button>
     </div>
   );
 }

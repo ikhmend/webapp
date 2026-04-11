@@ -1,6 +1,7 @@
 function RestaurantHeader({ restaurant }) {
   return (
     <>
+    <a href="#" class="grey-button">Буцах</a>
       <div className="details-hero">
         <img src={restaurant.heroImage} alt={restaurant.name} />
         <div className="hero-overlay"></div>
@@ -10,7 +11,7 @@ function RestaurantHeader({ restaurant }) {
           <h1>{restaurant.name}</h1>
           <div className="meta-row">
             <span className="rating">
-              <strong>{restaurant.rating}</strong>
+              <strong>⭐{restaurant.rating}</strong>
               <span>({restaurant.reviewCount} reviews)</span>
             </span>
             <span className="dot">•</span>

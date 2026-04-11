@@ -11,7 +11,6 @@ function updateCartCount() {
     cartCountElement.textContent = totalQuantity;
 }
 function addToCart(itemId) {
-    console.log("addToCart ажиллалаа", itemId);
     if (!restaurantData) return;
     let selectedItem = null;
     for (const group of restaurantData.menu) {
