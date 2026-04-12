@@ -1,3 +1,4 @@
+import { FaFacebook, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
 function Footer () {
     return (
         <div id="main-footer">
@@ -10,10 +11,10 @@ function Footer () {
                     </a>
                     <p className="footer-tagline">Discover and order from the best local restaurants.</p>
                     <div className="footer-social">
-                        <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i className="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><FaFacebook /></a>
+                        <a href="#" aria-label="Twitter"><FaXTwitter /></a>
+                        <a href="#" aria-label="Instagram"><FaInstagram /></a>
+                        <a href="#" aria-label="YouTube"><FaYoutube /></a>
                     </div>
                 </div>
                 <div className="footer-col">

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 import RestaurantHeader from "./RestaurantHeader";
 import MenuSection from "./MenuSection";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import ReviewSection from "./ReviewSection";
 import InfoSection from "./InfoSection";
 function RestaurantPage({ restaurant, addToCart, cartCount }) {

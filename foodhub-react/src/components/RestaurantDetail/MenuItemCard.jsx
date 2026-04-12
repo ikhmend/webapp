@@ -4,7 +4,7 @@ function MenuItemCard({ item, onAddToCart }) {
       {item.image && <img src={item.image} alt={item.name} />}
       <div className="food-content">
         <h3>{item.name}</h3>
-        <span className="status">Эрэлттэй</span>
+        {item.status && <span className="status">{item.status}</span>}
         <p className="light-text">{item.description}</p>
         <p className="item-price">{item.price}</p>
       </div>
