@@ -1,34 +1,40 @@
-import { FaLocationDot, FaCartShopping, FaUser } from "react-icons/fa6";
-function Navbar({cartCount}) {
+import { Link } from "react-router-dom";
+import { FaCartShopping, FaUser } from "react-icons/fa6";
+import { IoLocationSharp } from "react-icons/io5";
+function Navbar({ cartCount }) {
   return (
-    <nav id="navbar">
+    <header id="navbar">
       <div className="container nav-container">
         <div className="brand-row">
-          <a className="site-logo" href="#">
-            <span className="brand-circle">F</span>
+          <Link to="/" className="site-logo">
+            <div className="brand-circle">F</div>
             <span className="brand-text">FoodHub</span>
-          </a>
+          </Link>
+
           <div className="delivery-info">
-            <FaLocationDot />
-            <span>Deliver to: <strong>123 Main St</strong></span>
+            <IoLocationSharp />
+            <span>Deliver to: 123 Main St</span>
           </div>
         </div>
 
         <ul className="nav-menu">
           <li>
-            <a href="#" aria-label="Cart" className="cart-link">
+            <Link to="/cart" className="cart-link">
               <FaCartShopping />
-              <span id="cart-count" className="cart-count">{cartCount}</span>
-            </a>
+              {cartCount > 0 && (
+                <span className="cart-count">{cartCount}</span>
+              )}
+            </Link>
           </li>
           <li>
-            <a href="#" aria-label="Profile">
+            <Link to="/profile">
               <FaUser />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
-    </nav>
+    </header>
   );
 }
+
 export default Navbar;

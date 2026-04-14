@@ -4,11 +4,11 @@
   "heroImage": "./zurguud/pizza.jpg",
   "rating": 4.8,
   "reviewCount": 523,
-  "cuisine": ["Italian", "Pizza"],
-  "priceLevel": "$$",
-  "deliveryTime": "25-35 min",
-  "distance": "1.2 mi",
-  "deliveryFee": "$2.99",
+  "cuisine": ["Итали", " Пизза"],
+  "priceLevel": "₮₮",
+  "deliveryTime": "25-35 мин",
+  "distance": "1.2 км",
+  "deliveryFee": "5.000₮",
   "offer": "20% off orders over $30",
   "menu": [
     {
