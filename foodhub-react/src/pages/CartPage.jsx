@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import EmptyCart from "../components/Cart/EmptyCart";
@@ -6,6 +7,14 @@ import OrderSummary from "../components/Cart/OrderSummary";
 import PaymentMethod from "../components/Cart/PaymentMethod";
 import DeliveryForm from "../components/Cart/DeliveryForm";
 function CartPage({ cart, cartCount, qtyUp, qtyDown, removeItem, restaurant }) {
+  const [deliveryInfo, setDeliveryInfo] = useState({
+    name: "",
+    phone: "",
+    district: "",
+    address: "",
+    note: "",
+  });
+  const [paymentMethod, setPaymentMethod] = useState("Credit/Debit Card");
   function parsePrice(price) {
     return Number(String(price).replace(/[^\d]/g, ""));
   }
@@ -40,8 +49,14 @@ function CartPage({ cart, cartCount, qtyUp, qtyDown, removeItem, restaurant }) {
               qtyDown={qtyDown}
               removeItem={removeItem}
             />
-            <DeliveryForm />
-            <PaymentMethod />
+            <DeliveryForm
+              deliveryInfo={deliveryInfo}
+              setDeliveryInfo={setDeliveryInfo}
+            />
+            <PaymentMethod 
+              paymentMethod={paymentMethod}
+              setPaymentMethod={setPaymentMethod}
+            />
           </div>
           <div className="checkout-summary">
             <OrderSummary
@@ -49,7 +64,11 @@ function CartPage({ cart, cartCount, qtyUp, qtyDown, removeItem, restaurant }) {
             deliveryFee={hurgelt}
             shimtgel={tax}
             total={total}
-          /> 
+            cart={cart}
+            restaurant={restaurant}
+            deliveryInfo={deliveryInfo}
+            paymentMethod={paymentMethod}
+          />
           </div>
         </div></div>
       )}

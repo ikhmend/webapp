@@ -4,6 +4,7 @@ import restaurantData from "./data/restaurantData.json";
 import "./App.css";
 import RestaurantPage from "./components/RestaurantDetail/RestaurantPage";
 import CartPage from "./pages/CartPage";
+import OrderConfirmation from "./pages/OrderConfirmation";
 function App() {
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
@@ -74,6 +75,7 @@ function App() {
           />
         }
       />
+      <Route path="/order-confirmation" element={<OrderConfirmation />} />
     </Routes>
   );
 }
