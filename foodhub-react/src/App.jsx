@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import restaurantData from "./data/restaurantData.json";
+import {getRestaurantById} from "./api/restaurantApi";
 import "./App.css";
 import RestaurantPage from "./components/RestaurantDetail/RestaurantPage";
 import CartPage from "./pages/CartPage";
@@ -10,6 +10,8 @@ function App() {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
+  const [restaurant, setRestaurant] = useState(null);
+  const [loadingRestaurant, setLoadingRestaurant] = useState(true);
   function addToCart(item) {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
@@ -46,17 +48,42 @@ function App() {
     const updatedCart = cart.filter((cartItem) => cartItem.id !== itemId);
     setCart(updatedCart);
   }
+  function clearCart() {
+  setCart([]);
+  }
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+  useEffect(() => {
+  async function fetchRestaurant() {
+    try {
+      setLoadingRestaurant(true);
+      const data = await getRestaurantById(1);
+      setRestaurant(data);
+    } catch (error) {
+      console.error(error);
+      alert("Рестораны мэдээлэл авахад алдаа гарлаа.");
+    } finally {
+      setLoadingRestaurant(false);
+    }
+  }
+
+  fetchRestaurant();
+}, []);
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  if (loadingRestaurant) {
+  return <h1>Рестораны мэдээлэл ачааллаж байна...</h1>;
+  }
+  if (!restaurant) {
+    return <h1>Рестораны мэдээлэл олдсонгүй.</h1>;
+  }
   return (
     <Routes>
       <Route
         path="/"
         element={
           <RestaurantPage
-            restaurant={restaurantData}
+            restaurant={restaurant}
             addToCart={addToCart}
             cartCount={cartCount}
           />
@@ -66,16 +93,18 @@ function App() {
         path="/cart"
         element={
           <CartPage
-            restaurant={restaurantData}
+            restaurant={restaurant}
             cart={cart}
             cartCount={cartCount}
             qtyUp={qtyUp}
             qtyDown={qtyDown}
             removeItem={removeItem}
+            clearCart={clearCart}
           />
         }
       />
       <Route path="/order-confirmation" element={<OrderConfirmation />} />
+      <Route path="/order-confirmation/:id" element={<OrderConfirmation />} />
     </Routes>
   );
 }

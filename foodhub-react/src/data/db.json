@@ -1,0 +1,440 @@
+{
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Artisan Pizza Co.",
+      "heroImage": "./zurguud/pizza.jpg",
+      "rating": 4.8,
+      "reviewCount": 523,
+      "cuisine": [
+        "Итали",
+        " Пизза"
+      ],
+      "priceLevel": "₮₮",
+      "deliveryTime": "25-35 мин",
+      "distance": "1.2 км",
+      "deliveryFee": "5.000₮",
+      "offer": "20% off orders over $30",
+      "reviewsSummary": {
+        "average": 4.8,
+        "total": 523,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 3,
+          "4": 20,
+          "5": 75
+        }
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Sarah Johnson",
+          "avatar": "./zurguud/user1.jpg",
+          "rating": 5,
+          "date": "2/28/2024",
+          "text": "Best pizza in town! The crust is perfectly crispy and the ingredients are always fresh. The Margherita is my favorite - simple but delicious."
+        },
+        {
+          "id": 2,
+          "name": "Michael Chen",
+          "avatar": "./zurguud/user2.jpg",
+          "rating": 4,
+          "date": "2/25/2024",
+          "text": "Great food and fast delivery. The truffle mushroom pizza was amazing. Only complaint is that the portions could be slightly larger for the price."
+        },
+        {
+          "id": 3,
+          "name": "Emily Davis",
+          "avatar": "./zurguud/user3.jpg",
+          "rating": 5,
+          "date": "2/20/2024",
+          "text": "Absolutely love this place! The wood-fired oven makes such a difference. Everything tastes authentic and the service is always friendly."
+        }
+      ],
+      "info": {
+        "about": "Authentic wood-fired pizza with fresh, locally-sourced ingredients. Family-owned since 1985.",
+        "address": "123 Main Street, Downtown",
+        "phone": "(555) 123-4567",
+        "hours": "11:00 AM - 10:00 PM",
+        "tags": [
+          "Wood-fired",
+          "Organic",
+          "Family-friendly"
+        ]
+      }
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "101",
+      "restaurantId": 1,
+      "category": "Classic Pizzas",
+      "name": "Margherita Pizza",
+      "image": "/zurguud/margherita pizza.jpg",
+      "status": "Эрэлттэй",
+      "description": "Шинэхэн моцарелла бяслаг, Сан Марцано улаан лооль, базилик, нэмэлт оливын тос",
+      "price": "28.000₮"
+    },
+    {
+      "id": "102",
+      "restaurantId": 1,
+      "category": "Classic Pizzas",
+      "name": "Pepperoni Pizza",
+      "image": "/zurguud/pepperoni.jpg",
+      "status": "Эрэлттэй",
+      "description": "Давхар пепперони, моцарелла бяслаг, улаан лоольны сүмс",
+      "price": "38.000₮"
+    },
+    {
+      "id": "201",
+      "restaurantId": 1,
+      "category": "Specialty Pizzas",
+      "name": "Truffle Mushroom",
+      "image": "/zurguud/truffle.jpg",
+      "status": "",
+      "description": "Зэрлэг мөөг, трюфель тос, фонтина бяслаг",
+      "price": "36.000₮"
+    },
+    {
+      "id": "202",
+      "restaurantId": 1,
+      "category": "Specialty Pizzas",
+      "name": "BBQ Chicken",
+      "image": "",
+      "status": "",
+      "description": "Шарсан тахиа, BBQ сүмс, улаан сонгино, утсан гөүда бяслаг",
+      "price": "22.000₮"
+    },
+    {
+      "id": "301",
+      "restaurantId": 1,
+      "category": "Salads & Starters",
+      "name": "Ceaser Salad",
+      "image": "",
+      "status": "",
+      "description": "Пармезан бяслаг, улаан лооль, цызарь сүмс, крахмаль",
+      "price": "13.000₮"
+    },
+    {
+      "id": "302",
+      "restaurantId": 1,
+      "category": "Salads & Starters",
+      "name": "Саримстай талх",
+      "image": "",
+      "status": "",
+      "description": "Саримстай цөцгий, амтлагчтай шинэхэн барьсан талх",
+      "price": "6.900₮"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "#FH-1778494844376",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Бэлэн мөнгөөр",
+      "address": "BGD, 012-r bair, 4-r gudamj, 5-r orts",
+      "customerName": "Enkhmend",
+      "customerPhone": "Jargal",
+      "deliveryNote": "zalgaad helcheerei",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 3,
+          "price": 28000
+        }
+      ],
+      "subtotal": 84000,
+      "deliveryFee": 5000,
+      "serviceFee": 8400,
+      "total": 97400,
+      "id": "5uIYAR2TQm4"
+    },
+    {
+      "orderId": "#FH-1778494914800",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": "bdg, 016-r gudamj, 18-bair, 5-r orts",
+      "customerName": "enkhmend",
+      "customerPhone": "jargal",
+      "deliveryNote": "zalgaad heleerei ochood away",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 3,
+          "price": 28000
+        }
+      ],
+      "subtotal": 84000,
+      "deliveryFee": 5000,
+      "serviceFee": 8400,
+      "total": 97400,
+      "id": "HSUJgrMjpPQ"
+    },
+    {
+      "orderId": "#FH-1778556830997",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": "bdg, 026545455",
+      "customerName": "enkhmend",
+      "customerPhone": "jargal",
+      "deliveryNote": "zalgaad heleerei",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 5,
+          "price": 28000
+        }
+      ],
+      "subtotal": 140000,
+      "deliveryFee": 5000,
+      "serviceFee": 14000,
+      "total": 159000,
+      "id": "M1hbkKy--aI"
+    },
+    {
+      "orderId": "#FH-1778560665058",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Бэлэн мөнгөөр",
+      "address": "hahsh, 018-r bair, 1-р орц, 32-р тоот",
+      "customerName": "enkhmend",
+      "customerPhone": "jargal",
+      "deliveryNote": "орны код нь 0358#",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 3,
+          "price": 28000
+        },
+        {
+          "name": "Ceaser Salad",
+          "quantity": 4,
+          "price": 13000
+        },
+        {
+          "name": "Саримстай талх",
+          "quantity": 1,
+          "price": 6900
+        },
+        {
+          "name": "BBQ Chicken",
+          "quantity": 1,
+          "price": 22000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        }
+      ],
+      "subtotal": 200900,
+      "deliveryFee": 5000,
+      "serviceFee": 20090,
+      "total": 225990,
+      "id": "6r8XFPketvg"
+    },
+    {
+      "orderId": "#FH-1778583671045",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": "bzd, 016-r bair",
+      "customerName": "enhmend",
+      "customerPhone": "jaj",
+      "deliveryNote": "haalga buu togsh ",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 3,
+          "price": 28000
+        },
+        {
+          "name": "Ceaser Salad",
+          "quantity": 4,
+          "price": 13000
+        },
+        {
+          "name": "Саримстай талх",
+          "quantity": 1,
+          "price": 6900
+        },
+        {
+          "name": "BBQ Chicken",
+          "quantity": 1,
+          "price": 22000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        }
+      ],
+      "subtotal": 200900,
+      "deliveryFee": 5000,
+      "serviceFee": 20090,
+      "total": 225990,
+      "id": "PD2tY8mRFtI"
+    },
+    {
+      "orderId": "#FH-1778589382934",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": "bgd, hjbcjldw",
+      "customerName": "hh",
+      "customerPhone": "bb",
+      "deliveryNote": "orn",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 3,
+          "price": 28000
+        },
+        {
+          "name": "Ceaser Salad",
+          "quantity": 4,
+          "price": 13000
+        },
+        {
+          "name": "Саримстай талх",
+          "quantity": 1,
+          "price": 6900
+        },
+        {
+          "name": "BBQ Chicken",
+          "quantity": 1,
+          "price": 22000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        }
+      ],
+      "subtotal": 200900,
+      "deliveryFee": 5000,
+      "serviceFee": 20090,
+      "total": 225990,
+      "id": "mA0-s4vNzZk"
+    },
+    {
+      "orderId": "#FH-1778589620724",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": "bdg, cbhwd",
+      "customerName": "jargal",
+      "customerPhone": "irmuun",
+      "deliveryNote": "cenjB",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 3,
+          "price": 28000
+        },
+        {
+          "name": "Ceaser Salad",
+          "quantity": 4,
+          "price": 13000
+        },
+        {
+          "name": "Саримстай талх",
+          "quantity": 1,
+          "price": 6900
+        },
+        {
+          "name": "BBQ Chicken",
+          "quantity": 1,
+          "price": 22000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        }
+      ],
+      "subtotal": 200900,
+      "deliveryFee": 5000,
+      "serviceFee": 20090,
+      "total": 225990,
+      "id": "Jg3e7_10K3s"
+    },
+    {
+      "orderId": "#FH-1778591044831",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": "vewbhi, VDWBHI",
+      "customerName": "dh",
+      "customerPhone": "c ehwj",
+      "deliveryNote": "vrwbgjbije",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 2,
+          "price": 28000
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "quantity": 1,
+          "price": 38000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        }
+      ],
+      "subtotal": 130000,
+      "deliveryFee": 5000,
+      "serviceFee": 13000,
+      "total": 148000,
+      "status": "confirmed",
+      "createdAt": "2026-05-12T13:04:04.831Z",
+      "id": "XYO0Kq_ud6s"
+    },
+    {
+      "orderId": "#FH-1778594834884",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Credit/Debit Card",
+      "address": " cdjbh,  chbhWJL",
+      "customerName": "efjeh",
+      "customerPhone": "cjsabaH",
+      "deliveryNote": "ffff",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 28000
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "quantity": 1,
+          "price": 38000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        },
+        {
+          "name": "BBQ Chicken",
+          "quantity": 1,
+          "price": 22000
+        }
+      ],
+      "subtotal": 124000,
+      "deliveryFee": 5000,
+      "serviceFee": 12400,
+      "total": 141400,
+      "status": "confirmed",
+      "createdAt": "2026-05-12T14:07:14.884Z",
+      "id": "QwFWRGP_uTs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

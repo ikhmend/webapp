@@ -6,7 +6,7 @@ import CartItemSection from "../components/Cart/CartItemSection";
 import OrderSummary from "../components/Cart/OrderSummary";
 import PaymentMethod from "../components/Cart/PaymentMethod";
 import DeliveryForm from "../components/Cart/DeliveryForm";
-function CartPage({ cart, cartCount, qtyUp, qtyDown, removeItem, restaurant }) {
+function CartPage({ cart, cartCount, qtyUp, qtyDown, removeItem, restaurant, clearCart }) {
   const [deliveryInfo, setDeliveryInfo] = useState({
     name: "",
     phone: "",
@@ -68,6 +68,7 @@ function CartPage({ cart, cartCount, qtyUp, qtyDown, removeItem, restaurant }) {
             restaurant={restaurant}
             deliveryInfo={deliveryInfo}
             paymentMethod={paymentMethod}
+            clearCart={clearCart}
           />
           </div>
         </div></div>
