@@ -434,7 +434,50 @@
       "status": "confirmed",
       "createdAt": "2026-05-12T14:07:14.884Z",
       "id": "QwFWRGP_uTs"
+    },
+    {
+      "orderId": "#FH-1778638897733",
+      "restaurantName": "Artisan Pizza Co.",
+      "deliveryTime": "25-35 мин",
+      "paymentMethod": "Бэлэн мөнгөөр",
+      "address": "songinohairhan, 45-r bair, 5-r orts-16 toot",
+      "customerName": "dulmaa",
+      "customerPhone": "enkhjin",
+      "deliveryNote": "haalga bitgii togshooroi",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "price": 28000
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "quantity": 1,
+          "price": 38000
+        },
+        {
+          "name": "Truffle Mushroom",
+          "quantity": 1,
+          "price": 36000
+        },
+        {
+          "name": "BBQ Chicken",
+          "quantity": 1,
+          "price": 22000
+        },
+        {
+          "name": "Ceaser Salad",
+          "quantity": 3,
+          "price": 13000
+        }
+      ],
+      "subtotal": 163000,
+      "deliveryFee": 5000,
+      "serviceFee": 16300,
+      "total": 184300,
+      "status": "confirmed",
+      "createdAt": "2026-05-13T02:21:37.733Z",
+      "id": "9GiB1IIOvU0"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

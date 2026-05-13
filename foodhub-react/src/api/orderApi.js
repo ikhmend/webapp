@@ -1,9 +1,9 @@
 import { API_BASE_URL } from "./config";
 export async function createOrder(orderData) {
   const response = await fetch(`${API_BASE_URL}/orders`, {
-    method: "POST",
+    method:"POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type":"application/json",
     },
     body: JSON.stringify(orderData),
   });
@@ -13,7 +13,7 @@ export async function createOrder(orderData) {
   return response.json();
 }
 export async function getOrderById(id) {
-  const response = await fetch(`${API_BASE_URL}/orders/${id}`);
+  const response=await fetch(`${API_BASE_URL}/orders/${id}`);
   if (!response.ok) {
     throw new Error("Захиалгын мэдээлэл олдсонгүй.");
   }

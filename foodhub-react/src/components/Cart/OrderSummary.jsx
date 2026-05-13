@@ -37,7 +37,7 @@ function OrderSummary({subtotal,deliveryFee,shimtgel,total,cart,restaurant,deliv
       createdAt: new Date().toISOString(),
     };
     try {
-      const savedOrder = await createOrder(orderData);
+      const savedOrder=await createOrder(orderData);
       clearCart();
       navigate(`/order-confirmation/${savedOrder.id}`, {
         state: savedOrder,
