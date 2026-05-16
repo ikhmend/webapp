@@ -1,0 +1,11 @@
+node_modules/
+.env
+
+foodhub-react/node_modules/
+foodhub-backend/node_modules/
+
+foodhub-react/.env
+foodhub-backend/.env
+
+dist/
+build/

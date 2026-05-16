@@ -34,12 +34,11 @@ function OrderSummary({subtotal,deliveryFee,shimtgel,total,cart,restaurant,deliv
       serviceFee: shimtgel,
       total: total,
       status: "confirmed",
-      createdAt: new Date().toISOString(),
     };
     try {
       const savedOrder=await createOrder(orderData);
       clearCart();
-      navigate(`/order-confirmation/${savedOrder.id}`, {
+      navigate(`/order-confirmation/${savedOrder._id}`, {
         state: savedOrder,
       });
     } catch (error) {

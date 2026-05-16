@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+node_modules
+.env
+
+foodhub-react/node_modules
+foodhub-backend/node_modules
+
+foodhub-backend/.env
+foodhub-react/.env
+
+dist
+build
