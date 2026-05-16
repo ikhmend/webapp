@@ -14,7 +14,7 @@ function RestaurantPage({ restaurant, addToCart, cartCount }) {
   async function fetchMenuItems() {
     try {
       setLoadingMenu(true);
-      const data = await getMenuItemsByRestaurantId(restaurant.id);
+      const data =await getMenuItemsByRestaurantId(restaurant.id);
       setMenuItems(data);
     } catch (error) {
       console.error(error);
