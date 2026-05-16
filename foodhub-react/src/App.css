@@ -633,3 +633,52 @@ border-radius: 12px; transition: background-color 0.25s ease;}
 .confirmation-secondary-btn:hover {
   background: #f9fafb;
 }
+/* Mobile responsive checkout form */
+@media (max-width: 768px) {
+  .checkout-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  .checkout-card h3 {
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .checkout-field {
+    width: 100%;
+  }
+
+  .checkout-field label {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .checkout-field input,
+  .checkout-field textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 16px 18px;
+  }
+
+  .checkout-field textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  .checkout-card {
+    min-width: 0;
+    width: calc(100vw - 32px);
+}
+}
