@@ -10,11 +10,6 @@ function Navbar({ cartCount }) {
             <div className="brand-circle">F</div>
             <span className="brand-text">FoodHub</span>
           </Link>
-
-          <div className="delivery-info">
-            <IoLocationSharp />
-            <span>Deliver to: 123 Main St</span>
-          </div>
         </div>
 
         <ul className="nav-menu">
